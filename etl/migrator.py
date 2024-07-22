@@ -1,4 +1,5 @@
 """Migration tool for Clickhouse."""
+
 import asyncio
 import os
 from typing import Optional

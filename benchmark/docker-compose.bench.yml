@@ -1,0 +1,25 @@
+services:
+  ch:
+    image: clickhouse/clickhouse-server:24.6-alpine
+    container_name: ch
+    hostname: ch
+    restart: always
+    volumes:
+      - ch:/var/lib/clickhouse/
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+
+  mg:
+    image: mongo:7.0-jammy
+    container_name: mg
+    hostname: mg
+    restart: always
+    volumes:
+      - mg:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  ch:
+  mg:

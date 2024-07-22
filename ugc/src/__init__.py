@@ -5,7 +5,6 @@ from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 
 from . import api
-
 from .core.config import ProjectConfig
 from .db.kafka import get_event_broker
 from .engines.message_broker.kafka import KafkaProducerEngine
